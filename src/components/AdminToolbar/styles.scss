@@ -1,0 +1,14 @@
+.adminToolbar {
+    background-color: black;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    ul {
+        margin: 0;
+    }
+    a {
+        color: white;
+    }
+}

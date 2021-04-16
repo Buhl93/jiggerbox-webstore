@@ -1,0 +1,39 @@
+.menuWindow {
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgrey;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+    z-index: 100;
+    
+}
+
+.menuOpen {
+    transform: translateX(0);
+}
+
+.menuClose {
+    transform: translateX(-100%)
+}
+
+i {
+    font-size: 4rem;
+}
+
+@keyframes openMenu {
+    from {
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeMenu {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}
