@@ -1,0 +1,20 @@
+.account-headline {
+    font-family: Watch Tinkerbell, sans-serif;
+    text-align: center;
+}
+
+.account-list-wrap {
+    width: 85vw;
+    margin: 4rem auto;
+    padding: 2rem 0rem;
+    background-color: var(--wh);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+    p {
+        margin: 0 2rem;
+    }
+}
+
+.account-line-list {
+    margin: 2rem 0;
+}

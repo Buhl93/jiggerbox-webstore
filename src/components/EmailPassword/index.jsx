@@ -6,6 +6,9 @@ import Button from './../forms/Button'
 import AuthWrapper from '../AuthWrapper'
 
 import { resetPassword } from './../../redux/User/user.actions'
+import Line from './../Utils/Line'
+
+import './styles.scss'
 
 const mapState = ({ user }) => ({
     resetPasswordSuccess: user.resetPasswordSuccess,
@@ -36,18 +39,24 @@ const EmailPassword = () => {
 
     return (
         <AuthWrapper {...configAuthWrapper}>
-            <div className='formWrap'>
+            <div className="recover-password-line">
+                <Line />
+            </div>
+            <div className='form-wrap'>
                 <form onSubmit={handleSubmit}>
                     <FormInput 
                         type='email'
                         name='email'
                         value={email} 
-                        placeholder='Email'
+                        label='Email'
                         handleChange={e => setEmail(e.target.value)}
                     />
-                    <Button>
-                        Recover password
+                    <Button className='btn recover-password-button'>
+                        Recover Password
                     </Button>
+                    <p className='recover-password-text'>You will receive an email with instructions about recovery of your password</p>
+
+                    
                 </form>
             </div>
         </AuthWrapper>

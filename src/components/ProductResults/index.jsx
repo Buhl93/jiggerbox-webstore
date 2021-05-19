@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams, useHistory } from 'react-router-dom'
 
@@ -6,6 +6,10 @@ import {fetchProducts} from './../../redux/Products/products.actions'
 import FormSelect from './../forms/FormSelect'
 
 import Product from './Product'
+import Line from './../Utils/Line'
+import BannerImg from './../../assets/images/other/Component 12 – 1@2x.png'
+
+import './styles.scss'
 
 const mapState = ({ productsData }) => ({
     products: productsData.products
@@ -14,36 +18,26 @@ const mapState = ({ productsData }) => ({
 const ProductResults = () => {
     const history = useHistory();
     const dispatch = useDispatch();
-    const { filterType, filterAlcohol, filterTaste } = useParams();
+    const { filterType, filterAlcohol = '' } = useParams();
     const { products } = useSelector(mapState);
 
-    const { data } = products;
 
     
     useEffect(() => {
         dispatch(
-            fetchProducts({ filterType, filterAlcohol, filterTaste })
+            fetchProducts({ filterType, filterAlcohol })
         );
 
-    }, [filterAlcohol, filterType, filterTaste])
+    }, [filterAlcohol, filterType])
 
     const handleFilterAlcohol = (e) => {
         const nextFilter = e.target.value;
         history.push(`/products/${filterType}/${nextFilter}`);
     }
 
-    const handleFilterTaste = (e) => {
-        const nextFilter = e.target.value;
-
-        if (filterAlcohol) {
-            history.push(`/products/${filterType}/${filterAlcohol}/${nextFilter}`);
-            return;
-        }
-    }
-
     const configFilterAlcohol = {
         defaultValue: filterAlcohol,
-        label: 'Filter after alcohol type',
+        label: '',
         options: [
             {
                 value: '',
@@ -64,49 +58,32 @@ const ProductResults = () => {
         ],
         handleChange: handleFilterAlcohol
     }
-
-    const configFilterTaste = {
-        defaultValue: filterTaste,
-        label: 'Filter after taste profile',
-        options: [
-            {
-                value: '',
-                name: 'Show all'
-            },
-            {
-                value: 'sweet',
-                name: 'Sweet'
-            },
-            {
-                value: 'sour',
-                name: 'Sour'
-            },
-            {
-                value: 'bitter',
-                name: 'Bitter'
-            }
-        ],
-        handleChange: handleFilterTaste
-    }
     
 
     if (!Array.isArray(products)) return null;
     
     return (
-        <div>
-            <h1>
+        <div className='products-page-layout section-top-pad'>
+            <img className='products-banner-img' src={BannerImg} alt="" />
+            <h1 className='products-header'>
                 {filterType}
             </h1>
+            <h2 className='products-filter-header'>
+                {filterAlcohol ? `${filterAlcohol} based` : 'All Cocktails'}
+            </h2>
             
-            {filterType == 'cocktails' && 
-                <FormSelect {...configFilterAlcohol}/>
-                
-            }
-            {/*<FormSelect {...configFilterTaste}/>*/}
-            
+            <div className="filter">
+                {filterType == 'cocktails' && 
+                    <FormSelect {...configFilterAlcohol}/>
+                }
+            </div>
+
+            <div className="products-line">
+                <Line></Line>
+            </div>
 
             {products.length < 1 ? 'No search result.' : 
-                <div className='productResults'>
+                <div className='products-layout'>
                 {products.map((product, index) => {
                     const { productThumbnail, productName, productPrice } = product;
                     if (!productThumbnail || !productName || typeof productPrice == 'undefined') return null;
@@ -117,7 +94,7 @@ const ProductResults = () => {
                         <Product key={index} {...configProduct } />
                     )
                 })}
-            </div>
+                </div>
             }
             
 

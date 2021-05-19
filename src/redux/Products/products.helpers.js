@@ -33,7 +33,7 @@ export const handleDeleteProduct = productID => {
     })
 }
 
-export const handleFetchProducts = ({ filterType, filterAlcohol, filterTaste }) => {
+export const handleFetchProducts = ({ filterType, filterAlcohol, popular }) => {
     return new Promise((resolve, reject) => {
         // Save a reference of our firestore collection 'products' and order by value 'createdDate'
         let ref = firestore
@@ -42,7 +42,9 @@ export const handleFetchProducts = ({ filterType, filterAlcohol, filterTaste }) 
 
         if (filterType) ref = ref.where('productCategory', '==', filterType);
         if (filterAlcohol) ref = ref.where('alcohol', '==', filterAlcohol);
-        if (filterTaste) ref = ref.where('tasteProfile', '==', filterTaste);
+        if (popular) ref = ref.where('popular', '==', true);
+        
+        
 
         // Take snapshot of database, iterate over results and return data and id of document and save as variable productsArray
         ref
@@ -71,8 +73,11 @@ export const handleFetchProduct = productID => {
         .get()
         .then(snapshot => {
           if (snapshot.exists) {
-            resolve(
-              snapshot.data()
+            resolve({
+                ...snapshot.data(),
+                documentID: snapshot.id
+            }
+              
             );
           }
         })

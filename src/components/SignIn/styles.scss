@@ -1,0 +1,46 @@
+.signin-line {
+    margin: 0 0 2rem 0;
+}
+
+.reset-password {
+    a {
+        color: var(--mainCl);
+    }
+}
+
+.signin-button {
+    width: 100%;
+    margin: 2rem 0;
+    background-color: var(--secCl);
+    color: var(--wh);
+}
+
+.social-signin-button {
+    width: 100%;
+    margin: 2rem 0;
+    background-color: var(--mainCl);
+    color: var(--wh);
+}
+
+.create-account-header {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.signup-button {
+    width: 100%;
+    margin: 2rem 0;
+    background-color: var(--mainCl);
+    a {
+        color: var(--wh);
+    }
+    
+}
+
+.signin-img {
+    display: block;
+    margin: 3rem auto;
+    width: 80%;
+    height: 20%;
+}
+

@@ -1,44 +1,49 @@
 import React from 'react'
-import './styles.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { selectCartItemsCount } from './../../redux/Cart/cart.selectors'
+
+import './styles.scss'
 
 import { openMenu } from './../../redux/Menu/menu.actions'
 
-const mapState = ({ user }) => ({
-    currentUser: user.currentUser
+const mapState = (state) => ({
+    currentUser: state.user.currentUser,
+    totalNumCartItems: selectCartItemsCount(state)
 })
 
 const Header = () => {
     const dispatch = useDispatch();
-    const { currentUser } = useSelector(mapState);
+    const { currentUser, totalNumCartItems } = useSelector(mapState);
 
     return (
-        <div className='header'>
+        <header className='header'>
             
             <div onClick={() => dispatch(openMenu())}>
                     <i className="las la-bars"></i>
             </div>
             <div className='logo'>
                 <Link to='/'>
-                    Upstir
+                    Jiggerbox
                 </Link>
             </div>
             <nav className='navigate'>
                 <ul>
-                    <li>
-                        <Link to='/search'>
-                            <i className="las la-search"></i>
-                        </Link>
-                    </li>
                     <li>
                         <Link to='/favorites'>
                             <i className="lar la-heart"></i>
                         </Link>
                     </li>
                     <li>
-                        <Link to='/basket'>
-                            <i className="las la-shopping-bag"></i>
+                        <Link to='/my-cart'>
+                            <div className='my-cart-wrap'>
+                                <i className="las la-shopping-bag"></i>
+                                {totalNumCartItems > 0 &&
+                                <div className='item-count'>
+                                    {totalNumCartItems}
+                                </div> 
+                                }
+                            </div>
                         </Link>
                     </li>
                     {!currentUser && (
@@ -59,7 +64,7 @@ const Header = () => {
                 </ul>
             </nav>
             
-        </div>
+        </header>
     )
 }
 

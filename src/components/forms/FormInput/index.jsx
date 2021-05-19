@@ -1,15 +1,16 @@
 import React from 'react'
+import './styles.scss'
 
 const FormInput = ({ handleChange, label, ...otherProps}) => {
     return (
-        <div className='formRow'>
+        <div className='form-col'>
             {label && (
                 <label>
                     {label}
                 </label>
             )}
 
-            <input className='formInput' onChange={handleChange} {...otherProps} />
+            <input className='form-input' onChange={handleChange} {...otherProps} />
             
         </div>
     )

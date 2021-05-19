@@ -14,12 +14,16 @@ import Admin from './pages/Admin'
 import AddProduct from './pages/AddProduct';
 import Products from './pages/Products'
 import ProductDetails from './pages/ProductDetails';
+import Cart from './pages/Cart'
+import Home from './pages/Home'
 
 // Components
 import AdminToolbar from './components/AdminToolbar'
 import Menu from './components/Menu'
+import Header from './components/Header'
 
 import './default.scss';
+import ScrollToTop from './components/Utils/ScrollToTop';
 
 
 
@@ -54,12 +58,13 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollToTop />
       <AdminToolbar />
       <Menu />
       <Switch>
         <Route exact path='/' render={() => (
           <MainLayout>
-            Homepage
+            <Home />
           </MainLayout>
         )}/>
         <Route exact path='/products/:filterType' render={() => (
@@ -68,11 +73,6 @@ function App() {
           </MainLayout>
         )}/>
         <Route exact path='/products/:filterType/:filterAlcohol' render={() => (
-          <MainLayout>
-            <Products />
-          </MainLayout>
-        )}/>
-        <Route path='/products/:filterType/:filterAlcohol/:filterTaste' render={() => (
           <MainLayout>
             <Products />
           </MainLayout>
@@ -92,9 +92,9 @@ function App() {
             favorites
           </MainLayout>
         )}/>
-        <Route exact path='/basket' render={() => (
+        <Route exact path='/my-cart' render={() => (
           <MainLayout>
-            basket
+            <Cart />
           </MainLayout>
         )}/>
         <Route exact path='/login' render={() => (

@@ -1,16 +1,23 @@
 .header {
     height: 6.5rem;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 3rem;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-    position: sticky;
+    position: fixed;
     top: 0;
-    background-color: white;
+    left: 0;
+    background-color: var(--mainBgCl);
+    z-index: 100;
+
+    i {
+        font-size: 3.5rem;
+    }
 
     a {
-        color: black;
+        color: var(--mainCl);
         text-decoration: none;
     }
 
@@ -21,7 +28,32 @@
         
         li {
             margin: 0 5px;
+
+            
         }
     }
+
+    .my-cart-wrap {
+        position: relative;
+        height: 100%;
+        
+    }
+
+    .item-count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+        background-color: var(--secCl);
+        color: var(--wh);
+        bottom: 0;
+        right: 5%;
+        font-size: 1.1rem;
+    }
+
+    
     
 }

@@ -1,0 +1,20 @@
+
+
+.auth-wrapper {
+    width: 85vw;
+    margin: auto;
+
+    .form-wrap {
+        width: 85vw;
+        background-color: var(--wh);
+        margin: 3rem auto;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        padding: 2rem 2rem;
+    }
+}
+
+.auth-headline {
+    font-family: Watch Tinkerbell, sans-serif;
+    text-align: center;
+
+}

@@ -1,0 +1,71 @@
+
+
+.checkout-header {
+    font-family: Watch Tinkerbell, sans-serif;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    margin: 2.5rem 0 0 0;
+}
+
+.checkout-items-amount {
+    text-align: center;
+    margin: 0 0 2rem 0;
+}
+
+.checkout-line {
+    margin: 2.5rem 0;
+}
+
+.checkout-continue-shop-button {
+    width: 85vw;
+    margin: 4rem auto;
+    color: var(--wh);
+    background-color: var(--mainCl);
+}
+
+.payment-methods {
+    width: 85vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 4rem auto;
+    padding: 1rem 2rem;
+    background-color: var(--wh);
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.checkout-total-price {
+    width: 85vw;
+    background-color: var(--wh);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    margin: 4rem auto;
+
+    h3 {
+        text-align: center;
+        margin: 1rem 0 3rem 0;
+    }
+
+    div {
+        margin-bottom: 2rem;
+    }
+
+    button {
+        margin: 2rem auto 1rem;
+        color: var(--wh);
+        background-color: var(--secCl);
+        width: 100%;
+    }
+}
+
+.checkout-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+
+    button {
+        margin: 1rem 2rem;
+    }
+}

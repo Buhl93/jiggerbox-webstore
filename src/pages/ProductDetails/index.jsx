@@ -1,10 +1,10 @@
 import React from 'react'
-import ProductCard from './../../components/ProductCard'
+import ProductInfo from './../../components/ProductInfo'
 
 const ProductDetails = () => {
     return (
         <div>
-            <ProductCard />
+            <ProductInfo />
         </div>
     )
 }

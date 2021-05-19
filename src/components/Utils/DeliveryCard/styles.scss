@@ -1,0 +1,23 @@
+.delivery-card-layout {
+    width: 85vw;
+    background-color: var(--wh);
+    margin: auto;
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+    h3 {
+        letter-spacing: 0.3rem;
+        margin: 1rem;
+    }
+
+    p {
+        letter-spacing: 0.3rem;
+    }
+
+    i, span {
+        color: var(--secCl);
+    }
+}

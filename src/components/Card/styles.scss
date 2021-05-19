@@ -1,0 +1,27 @@
+.card {
+    background-color: var(--wh);
+    width: 75vw;
+    height: 45vh;
+    display: block;
+    padding:1.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+    img {
+        height: 80%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    figcaption {
+        text-align: center;
+        margin-top: 1.2rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .price {
+        font-size: 1.7rem;
+    }
+}

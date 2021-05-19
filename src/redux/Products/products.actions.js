@@ -30,7 +30,7 @@ export const fetchProducts = (filters) => async dispatch => {
         dispatch(setProducts(products));
         
     } catch(err) {
-         // console.log(err)
+         console.log(err)
     }
 }
 

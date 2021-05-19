@@ -6,6 +6,10 @@ import { resetAllAuthForms, signInWithGoogle } from './../../redux/User/user.act
 import FormInput from './../forms/FormInput'
 import AuthWrapper from './../AuthWrapper'
 import Button from './../forms/Button'
+import Line from './../Utils/Line'
+import SigninImg from './../../assets/images/other/SignInImg.png'
+
+import './styles.scss'
 
 const mapState = ({ user }) => ({
     signInSuccess: user.signInSuccess
@@ -37,14 +41,17 @@ const SignIn = () => {
 
     return (
         <AuthWrapper {...configAuthWrapper}>
-            <div className="formWrap">
+            <div className="signin-line">
+                <Line />
+            </div>
+            <div className="form-wrap">
                 <form onSubmit={handleSubmit}>
-
+                    
                     <FormInput 
                         type='email'
                         name='email'
-                        value={email} 
-                        placeholder='Email'
+                        value={email}
+                        label='Email'
                         handleChange={e => setEmail(e.target.value)}
                     />
 
@@ -52,32 +59,44 @@ const SignIn = () => {
                         type='password'
                         name='password'
                         value={password} 
-                        placeholder='Password'
+                        label='Password'
                         handleChange={e => setPassword(e.target.value)}
                     />
 
-                    <Button>
+                    <div className="reset-password">
+                        <Link to='/recovery'>
+                            Forgot your password?
+                        </Link>
+                    </div>
+
+                    <Button className='btn signin-button'>
                         Sign In
                     </Button>
                     
-                    <div className="socialSignIn">
-                        <Button onClick={handleGoogleSignIn}>
-                            Sign in with Google
-                        </Button>
-                    </div>
-
-                    <div className="resetPassword">
-                        <Link to='/recovery'>
-                            Reset Password
-                        </Link>
-                    </div>
                     
-                    <div className="signUp">
-                        <Link to='/registration'>
-                            Create an account
-                        </Link>
-                    </div>
                 </form>
+                
+            </div>
+            <Button className="btn social-signin-button" onClick={handleGoogleSignIn}>
+                Sign in with Google
+            </Button>
+
+            <div className="signin-line">
+                <Line />
+            </div>
+
+            <h3 className="create-account-header">
+                New Here?
+            </h3>
+                    
+            <Button className="btn signup-button">
+                <Link to='/registration'>
+                    Create an account
+                </Link>
+            </Button>
+
+            <div>
+                <img className="signin-img" src={SigninImg} alt="signin image"/>
             </div>
             
             

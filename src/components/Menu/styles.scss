@@ -1,17 +1,45 @@
 .menuWindow {
-    top: 0;
     height: 100vh;
     width: 100vw;
-    background-color: lightgrey;
-    position: absolute;
+    background-color: var(--mainBgCl);
+    position: fixed;
+    top: 0;
+    left: 0;
     transform: translateX(-100%);
     transition: transform 0.2s ease-in-out;
-    z-index: 100;
+    z-index: 200;
     
+}
+
+.menu-window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 2rem;
+}
+
+.hide-arrow {
+    opacity: 0;
+    pointer-events: none;
+    cursor: none;
+}
+
+.menu-line {
+    margin: 3rem 0;
+}
+
+.menu-help {
+    width: 85vw;
+    background-color: var(--wh);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    padding: 0.1rem 3rem;
+    margin: 2rem auto;
 }
 
 .menuOpen {
     transform: translateX(0);
+    overflow-y: auto;
 }
 
 .menuClose {

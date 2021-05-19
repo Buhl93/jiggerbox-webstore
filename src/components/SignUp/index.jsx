@@ -7,6 +7,9 @@ import { signUpUser, resetAllAuthForms } from './../../redux/User/user.actions'
 import FormInput from './../forms/FormInput'
 import AuthWrapper from './../AuthWrapper'
 import Button from './../forms/Button'
+import Line from './../Utils/Line'
+
+import './styles.scss'
 
 const mapState = ({ user }) => ({
     signUpSuccess: user.signUpSuccess,
@@ -62,7 +65,10 @@ const SignUp = () => {
 
     return (
         <AuthWrapper {...configAuthWrapper}>
-            <div className="formWrap">
+            <div className="signup-line">
+                <Line />
+            </div>
+            <div className="form-wrap">
 
                 <form onSubmit={handleSubmit}>
 
@@ -70,7 +76,7 @@ const SignUp = () => {
                         type='text'
                         name='displayName'
                         value={displayName} 
-                        placeholder='Full Name'
+                        label='Full Name'
                         handleChange={e => setDisplayName(e.target.value)}
                     />
 
@@ -78,7 +84,7 @@ const SignUp = () => {
                         type='email'
                         name='email'
                         value={email} 
-                        placeholder='Email'
+                        label='Email'
                         handleChange={e => setEmail(e.target.value)}
                     />
 
@@ -86,7 +92,7 @@ const SignUp = () => {
                         type='password'
                         name='password'
                         value={password} 
-                        placeholder='Password'
+                        label='Password'
                         handleChange={e => setPassword(e.target.value)}
                     />
 
@@ -94,11 +100,11 @@ const SignUp = () => {
                         type='password'
                         name='confirmPassword'
                         value={confirmPassword} 
-                        placeholder='Confirm Password'
+                        label='Confirm Password'
                         handleChange={e => setConfirmPassword(e.target.value)}
                     />      
 
-                    <Button>
+                    <Button className='btn create-account-button'>
                         Sign Up
                     </Button>
                     

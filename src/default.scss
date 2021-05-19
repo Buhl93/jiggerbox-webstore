@@ -6,9 +6,10 @@ html,
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--mainBgCl);
+    color: var(--mainCl);
 }
 
-// make page fixed to fill whole heigth of page
 html,
 body,
 #root,
@@ -17,6 +18,21 @@ body,
     height: 100%;
 }
 
+
+.section-top-pad {
+    padding-top: 1rem;
+}
+
+// Colors
+
+:root {
+    --mainBgCl: #F9F9F9;
+    --mainCl: #575757;
+    --secCl: #CF4327;
+    --wh: #FFFFFF
+}
+
+
 *, ::before, ::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -24,14 +40,29 @@ body,
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Watch Applemint, sans-serif;
+    
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1;
 }
 
+.headline {
+    font-family: Watch Tinkerbell, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+i {
     cursor: pointer;
 }
 
@@ -45,15 +76,6 @@ a, a:hover {
     transition: all 0.4 seconds ease-in-out;
 }
 
-//make main fill whole height of page minus heigth of header
-.main {
-    width: 100%;
-    height: calc(100% - 6.5rem);
-    max-width: 1450px;
-    padding: 0 10px;
-    margin: 0 auto;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -62,3 +84,14 @@ ul {
 li {
     list-style: none;
 }
+
+//make main fill whole height of page minus heigth of header
+.main {
+    display: block;
+    width: 100vw;
+    height: calc(100% - 6.5rem);
+    max-width: 1450px;
+    padding-bottom: 2rem;
+    margin-top: 6.5rem;
+}
+
