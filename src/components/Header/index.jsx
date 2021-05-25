@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <header className='header'>
             
-            <div onClick={() => dispatch(openMenu())}>
+            <div className="menu-opener" onClick={() => dispatch(openMenu())}>
                     <i className="las la-bars"></i>
             </div>
             <div className='logo'>
@@ -27,8 +27,15 @@ const Header = () => {
                     Jiggerbox
                 </Link>
             </div>
-            <nav className='navigate'>
+            <div className='menu-nav'>
                 <ul>
+                    <li>Cocktails</li>
+                    <li>Accessories</li>
+                    <li>Snacks</li>
+                </ul>
+            </div>
+            <nav className='navigate'>
+                <ul className='nav-list'>
                     <li>
                         <Link to='/favorites'>
                             <i className="lar la-heart"></i>

@@ -21,15 +21,13 @@
         text-decoration: none;
     }
 
-    ul {
+    .nav-list {
         display: flex;
         margin: 0;
         padding: 0;
         
         li {
             margin: 0 5px;
-
-            
         }
     }
 
@@ -54,6 +52,50 @@
         font-size: 1.1rem;
     }
 
-    
-    
+}
+
+.menu-nav {
+    display: none;
+}
+
+// bigger than mobile
+
+@media screen and (min-width: 600px) {
+    .header {
+        height: 5.5rem;
+        display: block;
+        position: relative;
+    }
+    .logo {
+        position: absolute;
+        left: 4vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .menu-opener {
+        display: none;
+    }
+    .menu-nav {
+        display: inline;
+        position: absolute;
+        left: 23vw;
+        top: 50%;
+        transform: translateY(-50%);
+
+        ul {
+            display: flex;
+
+            li {
+                font-size: 1.5rem;
+                margin-right: 5rem;
+            }
+        }
+        
+    }
+    .navigate {
+        position: absolute;
+        right: 5vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
