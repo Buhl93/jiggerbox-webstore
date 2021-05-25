@@ -95,3 +95,10 @@ li {
     margin-top: 6.5rem;
 }
 
+@media screen and (min-width: 600px) {
+    .main {
+        height: calc(100% - 5.5rem);
+        margin-top: 5.5rem;
+    }
+}
+

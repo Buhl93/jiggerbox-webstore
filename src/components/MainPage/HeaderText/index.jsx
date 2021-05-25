@@ -11,7 +11,7 @@ const HeaderText = () => {
             <h1 className='headline'>Spirit in a box</h1>
             <p>We create wonderful cocktail boxes designed for you to mix at home.</p>
             <Link to='/products/cocktails/'>
-                <Button>
+                <Button className='btn header-text-button'>
                     Browse our selection
                 </Button> 
             </Link>

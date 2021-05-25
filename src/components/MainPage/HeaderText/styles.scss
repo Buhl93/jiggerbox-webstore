@@ -18,15 +18,35 @@
         opacity: 0.8;
     }
 
-    button {
-        background-color: var(--secCl);
-        color: var(--mainBgCl);
-        font-weight: bold;
-    }
+    
 
     .header-text-line {
         margin-top: 100px;
     }
     
+}
+
+.header-text-button {
+    background-color: var(--secCl);
+    color: var(--mainBgCl);
+    font-weight: bold;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+}
+
+@media screen and (min-width: 600px) {
+    .header-text-layout {
+        position: absolute;
+        top: 30vh;
+        right: 12vw;
+        width: 30vw;
+        color: var(--wh);
+    }
+    .header-text-line {
+        display: none;
+    }
+    .header-text-button {
+        background-color: var(--wh);
+        color: var(--secCl);
+    }
 }
 

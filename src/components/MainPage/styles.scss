@@ -3,3 +3,11 @@
     height: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (min-width: 600px) {
+    .headerImg {
+        height: calc(100vh - 5.5rem);
+        object-fit: cover;
+        object-position: 50% 60%;
+    }
+}
