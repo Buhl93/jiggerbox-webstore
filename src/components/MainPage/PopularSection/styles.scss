@@ -1,8 +1,17 @@
 .popluar-section-layout {
-    display: flexbox;
+    display: flex;
+    width: 100vw;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .popular-section-line {
     margin: 3rem auto;
+}
+
+@media screen and (min-width: 600px) {
+    .headline {
+        margin-top: 5rem;
+    }
 }

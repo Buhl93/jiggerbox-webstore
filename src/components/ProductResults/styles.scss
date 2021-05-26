@@ -1,5 +1,6 @@
 .products-page-layout {
     position: relative;
+    width: 100vw;
 }
 
 .products-layout {
@@ -22,9 +23,12 @@
 }
 
 .products-banner-img {
-    margin: auto;
+    position: absolute;
+    top: 0.7vh;
+    left: 50%;
+    transform: translateX(-50%);
     width: 98vw;
-    height: 8vh;
+    height: 9vh;
 
 }
 
@@ -34,7 +38,18 @@
     text-align: center;
     letter-spacing: 0.3rem;
     font-size: 2rem;
-    margin: 0 0 2rem 0;
+    margin: 7rem 0 2rem 0;
     opacity: 0.7;
     font-size: 1.6rem;
+}
+
+@media screen and (min-width: 600px) {
+    .products-banner-img {
+        width: 30vw;
+        height: 13vh;
+        top: -0.5vh;
+    }
+    .products-filter-header {
+        margin-top: 8rem;
+    }
 }
