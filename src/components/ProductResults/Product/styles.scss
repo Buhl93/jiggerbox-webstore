@@ -1,3 +1,7 @@
+.products-page-layout {
+  position: relative;
+}
+
 .product {
     background-color: var(--wh);
     width: 45vw;
@@ -32,6 +36,10 @@
   
 }
 
+.filter-list {
+  display: none;
+}
+
 .thumb {
     display: block;
     width: 100%;
@@ -58,4 +66,33 @@
   color: var(--wh);
   font-size: 1.3rem;
   padding: 0.2rem 2.3rem;
+}
+
+// web view
+
+@media screen and (min-width: 600px) {
+  .products-layout {
+    width: 60vw;
+    margin: 0 25%;
+  }
+
+  .product {
+    width: 17vw;
+    height: 50vh;
+    padding:0.7rem;
+    margin: 3rem 0rem
+  }
+
+  .filter {
+    display: none;
+  }
+
+  .filter-list {
+    display: inline;
+    position: absolute;
+    top: 25vh;
+    left: 10vw;
+  }
+
+  
 }

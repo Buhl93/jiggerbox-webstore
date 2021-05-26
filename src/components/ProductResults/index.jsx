@@ -35,6 +35,10 @@ const ProductResults = () => {
         history.push(`/products/${filterType}/${nextFilter}`);
     }
 
+    const handleListFilterAlcohol = (alcoholFilter) => {
+        history.push(`/products/cocktails/${alcoholFilter}`);
+    }
+
     const configFilterAlcohol = {
         defaultValue: filterAlcohol,
         label: '',
@@ -78,8 +82,38 @@ const ProductResults = () => {
                 }
             </div>
 
+            
+
             <div className="products-line">
                 <Line></Line>
+            </div>
+
+            <div className='filter-list'>
+                <ul>
+                    <li className='main-list-item'>Cocktails</li>
+                    <li className='sec-list-item' 
+                        onClick={() => {
+                            handleListFilterAlcohol('');
+                        }}>
+                        All kinds
+                    </li>
+                    <li className='sec-list-item'
+                        onClick={() => {
+                            handleListFilterAlcohol('gin');
+                        }}
+                    >Gin based
+                    </li>
+                    <li className='sec-list-item'
+                        onClick={() => {
+                            handleListFilterAlcohol('rum');
+                        }}
+                    >Rum based</li>
+                    <li className='sec-list-item'
+                        onClick={() => {
+                            handleListFilterAlcohol('vodka');
+                        }}
+                    >Vodka based</li>
+                </ul>
             </div>
 
             {products.length < 1 ? 'No search result.' : 
