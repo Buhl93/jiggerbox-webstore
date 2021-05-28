@@ -21,3 +21,9 @@
         color: var(--secCl);
     }
 }
+
+@media screen and (min-width: 600px) {
+    .delivery-card-layout {
+        width: 40vw;
+    }
+}

@@ -56,56 +56,56 @@ const ProductCard = () => {
 
     return (
         <div className='product-info'>
-            <div>
-                <div>
+            <div className='web-view'>
+                <div className='product-info-glider'>
                     <GliderSnap img={productThumbnail}/>
                 </div>
-                
-            </div>
-            <div className='product-info-wrapper'>
-                <img className='product-info-banner' src={BannerImg} alt="" />
-                <h2 className='product-info-name'>
-                    {productName}
-                </h2>
-                   
-                <div className='flex'>
-                    <p className='product-info-price'>$ {productPrice}</p>
-                    <Button className="btn product-info-btn" onClick={() => handleAddToCart(product)}>
-                        Buy
-                    </Button>
+                <div className='product-info-wrapper'>
+                    <img className='product-info-banner' src={BannerImg} alt="" />
+                    <h2 className='product-info-name'>
+                        {productName}
+                    </h2>
                     
-                </div>
-                
-                <div className="product-info-description">
-                    <h3 className='description-header'>Description</h3>
-                    <span 
-                    className='description-text'
-                    dangerouslySetInnerHTML={{ __html: productDesc }} 
-                    />
-                </div>
-                <div className="product-info-line">
-                    <Line />
-                </div>
-                <div className="product-info-content">
-                    <h3 className='content-header'>What you get</h3>
-                    <div className='box-content'>
-                        {arr.map((item, index) => (
-                            
-                            <div key={index}>
-                                <ContentCard {...configContentCard}/>
-                            </div>
-                            
-                        ))}
+                    <div className='flex'>
+                        <p className='product-info-price'><span>Price:</span> $ {productPrice} <span id='vats-text'>incl. VATS</span></p>
+                        <Button className="btn product-info-btn" onClick={() => handleAddToCart(product)}>
+                            Buy
+                        </Button>
+                        
+                    </div>
+                    
+                    <div className="product-info-description">
+                        <h3 className='description-header'>Description</h3>
+                        <span 
+                        className='description-text'
+                        dangerouslySetInnerHTML={{ __html: productDesc }} 
+                        />
                     </div>
                 </div>
-                <div className="product-info-line">
-                    <Line />
-                </div>
-                <div className="delivery-card">
-                    <DeliveryCard />
-                </div>
+            </div>
+                    <div className="product-info-line">
+                        <Line />
+                    </div>
+                    <div className="product-info-content">
+                        <h3 className='content-header'>What you get</h3>
+                        <div className='box-content'>
+                            {arr.map((item, index) => (
+                                
+                                <div key={index}>
+                                    <ContentCard {...configContentCard}/>
+                                </div>
+                                
+                            ))}
+                        </div>
+                    </div>
+                    <div className="product-info-line">
+                        <Line />
+                    </div>
                 
-                
+            
+            
+            <div className="delivery-card">
+                <DeliveryCard />
             </div>
             
         </div>

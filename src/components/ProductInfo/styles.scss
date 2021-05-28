@@ -3,6 +3,8 @@
     background-color: var(--mainBgCl);
     margin: 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-info-img {
@@ -20,7 +22,7 @@
 
 .product-info-name {
     position: absolute;
-    top: -6.2vh;
+    top: -4.2vh;
     left: 50%;
     width: 95vw;
     text-align: center;
@@ -31,10 +33,9 @@
 
 .product-info-banner {
     width: 100vw;
-    height: 7vh;
-    margin: auto;
+    height: 9vh;
     position: absolute;
-    top: -6vh;
+    top: -5vh;
     left: 0;
 }
 
@@ -55,6 +56,10 @@
 
 .product-info-price {
     font-size: 3rem;
+
+    span {
+        display: none;
+    }
 }
 
 .product-info-line {
@@ -89,4 +94,80 @@
         font-size: 1.9rem;
         margin: 1rem;
     }
+}
+
+@media screen and (min-width: 600px) {
+    .web-view {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50vw;
+        margin: auto;
+    }
+    .product-info-wrapper {
+        margin-top: 10rem;
+        width: 30vw;
+        align-items: flex-start;
+    }
+    .product-info-content {
+        margin-top: 4rem;
+
+        .content-header {
+            font-size: 3rem;
+        }
+    }
+
+    
+    .product-info-line {
+        width: 100%;
+    }
+    .delivery-card {
+        
+    }
+    .product-info-name {
+        top: -6.5vh;
+        left: 50%;
+        width: 30vw;
+    }
+    
+    .product-info-banner {
+        width: 100%;
+        height: 9vh;
+        top: -7vh;
+        left: 0;
+    }
+    .product-info-glider {
+        margin-top: 5rem;
+        img {
+            width: 25vw;
+            height: 60vh;
+            margin-left: 50%;
+            object-fit: cover;
+            transform: translateX(-50%);
+        }
+    }
+    .product-info-description {
+        .description-text {
+            margin: 1rem 0;
+        }
+    }
+    .flex {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+        width: 30vw;
+    }
+    .product-info-btn {
+        width: 100%;
+    }
+    .product-info-price {
+        span {
+            display: inline;
+        }
+        #vats-text {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+        
+    }
+    
 }

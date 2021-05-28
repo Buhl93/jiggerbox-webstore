@@ -14,3 +14,10 @@
     object-fit: cover;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+@media screen and (min-width: 600px) {
+    .content-card-image {
+        width: 30vw;
+        height: 20vh;
+    }
+}
