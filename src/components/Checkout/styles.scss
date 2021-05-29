@@ -69,3 +69,28 @@
         margin: 1rem 2rem;
     }
 }
+
+@media screen and (min-width: 600px) {
+    .checkout-layout {
+        width: 100vw;
+    }
+    .checkout-continue-shop-button {
+        width: 25vw;
+    }
+    .payment-methods, .checkout-total-price {
+        width: 25vw;
+    }
+
+    .checkout-web-view {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .checkout-column {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .checkout-total-price {
+        margin: 3rem 0;
+    }
+}

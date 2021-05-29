@@ -36,7 +36,7 @@ const Checkout = () => {
     if (!Array.isArray(cartItems)) return null;
 
     return (
-        <div className='section-top-pad'>
+        <div className='section-top-pad checkout-layout'>
             <h2 className='checkout-header'>
                 Your Basket
             </h2>
@@ -47,49 +47,57 @@ const Checkout = () => {
             <div className="checkout-items-amount">
                 {totalNumCartItems === 0 ? 'Your cart is empty' : `${totalNumCartItems} ${totalNumCartItems > 1 ? 'products' : 'product'}`}
             </div>
-            <ul>
-            {
-                cartItems.map((cartItem, index) => {
+            
+            <div className='checkout-web-view'>
+                <ul>
+                    {
+                        cartItems.map((cartItem, index) => {
+                            
+            
+                            const configItem = {...cartItem};
+                            
+                            return (
+                                <li>
+                                    <Item {...configItem}/>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+                <div className='checkout-column'>
+                    <Button className='btn checkout-continue-shop-button' onClick={() => history.goBack()}>
+                        Continue Shopping
+                    </Button>
+                    <div className="payment-methods">
+                        <h3>
+                            We Accept
+                        </h3>
+                    </div>
+                    <div className="checkout-total-price">
+                        <h3>
+                            Total Price
+                        </h3>
+                        <div>
+                            Subtotal: $ { accumulatedPrice }
+                        </div>
+                        <div>
+                            Delivery: $ { delivery }
+                        </div>
+                        <div>
+                            Total price (inc. VAT): $ { accumulatedPrice + delivery }
+                        </div>
                     
-    
-                    const configItem = {...cartItem};
-                    
-                    return (
-                        <li>
-                            <Item {...configItem}/>
-                        </li>
-                    )
-                })
-            }
-            </ul>
-            <div className='checkout-line'>
-                <Line />
-            </div>
-            <Button className='btn checkout-continue-shop-button' onClick={() => history.goBack()}>
-                Continue Shopping
-            </Button>
-            <div className="payment-methods">
-                <h3>
-                    We Accept
-                </h3>
-            </div>
-            <div className="checkout-total-price">
-                <h3>
-                    Total Price
-                </h3>
-                <div>
-                    Subtotal: $ { accumulatedPrice }
+                        <Button>
+                            Proceed to payment
+                        </Button>
+                    </div>
+                    </div>
                 </div>
-                <div>
-                    Delivery: $ { delivery }
-                </div>
-                <div>
-                    Total price (inc. VAT): $ { accumulatedPrice + delivery }
-                </div>
-                <Button>
-                    Proceed to payment
-                </Button>
+                <div className='checkout-line'>
+                    <Line />
+                
             </div>
+            
             <DeliveryCard />
            
                 

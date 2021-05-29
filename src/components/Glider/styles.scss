@@ -1,5 +1,12 @@
-.glider-dot.active{
-    background: var(--secCl);
+.glider {
+    width: 100vw;
+    margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .glider {
+        width: 40vw;
+    }
 }
 
 

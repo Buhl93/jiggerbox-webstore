@@ -37,11 +37,9 @@ const Glider = () => {
         }
     
         return (
-            <div key={index}>
-                <figure key={index}>
-                    <Card {...configCard}/>
-                </figure>
-            </div>
+            <figure key={index}>
+                <Card {...configCard}/>
+            </figure>
         )
                 
             

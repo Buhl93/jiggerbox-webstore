@@ -9,8 +9,8 @@ import './styles.scss'
 
 const MainPage = () => {
     return (
-        <div>
-            <div >
+        <div className='mainpage-layout'>
+            <div>
                 <img className="headerImg" src={headerImg} alt=""/>
             </div>
             <HeaderText />

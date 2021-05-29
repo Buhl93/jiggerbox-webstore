@@ -26,7 +26,7 @@ body,
 // Colors
 
 :root {
-    --mainBgCl: #F9F9F9;
+    --mainBgCl: #fcfcfc;
     --mainCl: #575757;
     --secCl: #CF4327;
     --wh: #FFFFFF
@@ -44,6 +44,7 @@ body {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1;
+    overflow-x: hidden;
 }
 
 .headline {
@@ -87,7 +88,7 @@ li {
 //make main fill whole height of page minus heigth of header
 .main {
     display: block;
-    width: 100vw;
+    width: 100%;
     height: calc(100% - 6.5rem);
     max-width: 1450px;
     padding-bottom: 2rem;

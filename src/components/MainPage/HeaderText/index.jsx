@@ -17,7 +17,7 @@ const HeaderText = () => {
             </Link>
              
             <div className="header-text-line">
-            <Line /> 
+                <Line /> 
             </div>
              
         </div>
