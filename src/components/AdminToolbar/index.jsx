@@ -21,7 +21,7 @@ const AdminToolbar = () => {
             <Link to='/admin'>
                 <ul>
                     <li>
-                        Admin
+                        Admin Menu
                     </li>
                 </ul>
                 

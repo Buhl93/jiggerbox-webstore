@@ -10,11 +10,32 @@
     background-color: var(--wh);
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 
-    p {
+    li {
         margin: 0 2rem;
     }
 }
 
 .account-line-list {
     margin: 2rem 0;
+}
+
+@media screen and (min-width: 600px) {
+    .account-line-list {
+        margin: 2rem 0;
+        width: 100%;
+        .line {
+            width: 100%;
+        }
+    }
+    .account-list-wrap {
+        width: 40vw;
+        margin: 4rem auto;
+        padding: 2rem 0rem;
+        background-color: var(--wh);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    
+        p {
+            margin: 0 2rem;
+        }
+    }
 }

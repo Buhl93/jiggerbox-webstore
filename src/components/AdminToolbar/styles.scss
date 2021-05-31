@@ -1,14 +1,23 @@
 .adminToolbar {
-    background-color: black;
+    background-color: rgba(28, 28, 28, 0.8);
     display: flex;
-    padding: 10px 20px;
+    padding: 1.5rem 3rem;
     justify-content: flex-end;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100vw;
+    top: 6.5rem;
+    z-index: 100;
     ul {
         margin: 0;
     }
     a {
         color: white;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .adminToolbar {
+        top: 5.5rem;
+        padding: 1.5rem 7rem;
     }
 }

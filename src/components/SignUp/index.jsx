@@ -108,7 +108,7 @@ const SignUp = () => {
                         Sign Up
                     </Button>
                     
-                    <div className="signIn">
+                    <div className="signIn-link">
                         <Link to='/login'>
                             Already have an user?
                         </Link>

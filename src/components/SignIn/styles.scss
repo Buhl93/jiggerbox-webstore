@@ -37,10 +37,33 @@
     
 }
 
+
 .signin-img {
     display: block;
     margin: 3rem auto;
     width: 80%;
     height: 20%;
+}
+
+@media screen and (min-width: 600px) {
+    .signup-button {
+        width: 40%;
+        margin: 5rem auto;
+        
+    }
+    .social-signin-button {
+        width: 40%;
+        margin: 5rem auto;
+    }
+    .create-account-header {
+        font-size: 3rem;
+        margin: 3rem 0;
+    }
+    .signin-img {
+        display: block;
+        width: 40%;
+        height: 10%;
+        margin: 5rem auto;
+    }
 }
 

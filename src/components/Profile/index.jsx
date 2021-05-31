@@ -32,33 +32,36 @@ const Profile = () => {
                 <Line />
             </div>
             <div className="account-list-wrap">
-                <p>My orders</p>
-                <div className="account-line-list">
-                    <Line />
-                </div>
-                <p>Change Personal Details</p>
-                <div className="account-line-list">
-                    <Line />
-                </div>
-                <p>Change Delivery Details</p>
-                <div className="account-line-list">
-                    <Line />
-                </div>
-                <p>Returns</p>
-                <div className="account-line-list">
-                    <Line />
-                </div>
-                <p>Gift Cards</p>
-                <div className="account-line-list">
-                    <Line />
-                </div>
-                <p>Help and Contact</p>
-                <div className="account-line-list">
-                    <Line />
-                </div>
-                <div onClick={() => auth.signOut()}>
-                    <p>Sign Out</p>
-                </div>
+                <ul>
+                    <li>My orders</li>
+                    <div className="account-line-list">
+                        <Line />
+                    </div>
+                    <li>Change Personal Details</li>
+                    <div className="account-line-list">
+                        <Line />
+                    </div>
+                    <li>Change Delivery Details</li>
+                    <div className="account-line-list">
+                        <Line />
+                    </div>
+                    <li>Returns</li>
+                    <div className="account-line-list">
+                        <Line />
+                    </div>
+                    <li>Gift Cards</li>
+                    <div className="account-line-list">
+                        <Line />
+                    </div>
+                    <li>Help and Contact</li>
+                    <div className="account-line-list">
+                        <Line />
+                    </div>
+                    <div onClick={() => auth.signOut()}>
+                        <li>Sign Out</li>
+                    </div>
+                </ul>
+                
             </div>
             
         </div>

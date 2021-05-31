@@ -36,7 +36,7 @@ const Header = () => {
             </div>
             <nav className='navigate'>
                 <ul className='nav-list'>
-                    <li>
+                    <li className='fav-nav'>
                         <Link to='/favorites'>
                             <i className="lar la-heart"></i>
                         </Link>

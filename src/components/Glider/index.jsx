@@ -46,7 +46,7 @@ const Glider = () => {
     })
 
     return (
-        <div className='glider'>
+        <div className='glider-mobile'>
                {productCards.length > 0 && 
                <Glide
                 type='carousel'
