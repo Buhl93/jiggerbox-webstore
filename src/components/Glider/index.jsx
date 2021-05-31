@@ -46,21 +46,39 @@ const Glider = () => {
     })
 
     return (
-        <div className='glider-mobile'>
-               {productCards.length > 0 && 
-               <Glide
-                type='carousel'
-                perView='1.3'
-                gap='20'
-                >
-                   
-                  
-                  {productCards}
+        <>
+            <div className='glider-mobile'>
+                {productCards.length > 0 && 
+                <Glide
+                    type='carousel'
+                    perView='1.3'
+                    gap='20'
+                    >
                     
                     
-                </Glide> 
-                }
-        </div>
+                    {productCards}
+                        
+                        
+                    </Glide> 
+                    }
+            </div>
+            <div className='glider-web'>
+                {productCards.length > 0 && 
+                <Glide
+                    type='carousel'
+                    perView='4'
+                    gap='20'
+                    >
+                    
+                    
+                    {productCards}
+                        
+                        
+                    </Glide> 
+                    }
+            </div>
+        </>
+        
             
         
     )

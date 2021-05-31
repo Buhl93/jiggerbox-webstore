@@ -1,7 +1,9 @@
-.glider-mobile {
+.glider-mobile, .glider-web {
     width: 100vw;
     margin: auto;
 }
+
+
 
 @media screen and (min-width: 600px) {
     .glider-mobile {
