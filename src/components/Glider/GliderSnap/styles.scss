@@ -1,6 +1,22 @@
-.gliderSnap {
-    figure {
-        padding: 0;
-        margin: 0;
+.glider-productinfo-mobile, .glider-productinfo-web {
+    width: 100vw;
+    margin: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.glider-productinfo-web {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    .glider-productinfo-mobile {
+        display: none;
     }
 }

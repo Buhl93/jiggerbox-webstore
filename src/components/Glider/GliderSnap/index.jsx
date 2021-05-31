@@ -10,12 +10,12 @@ const GliderSnap = ({img}) => {
 
     return (
         <>
-            <div className='glider-mobile'>
+            <div className='glider-productinfo-mobile'>
                 {arr.length > 0 && 
                     <Glide
                     type='carousel'
-                    perView='1.3'
-                    gap='20'
+                    perView='1'
+                    gap='0'
                     >
                     
                     <img src={img} alt="" />
@@ -26,7 +26,7 @@ const GliderSnap = ({img}) => {
                     </Glide> 
                     }
             </div>
-            <div className='glider-web'>
+            <div className='glider-productinfo-web'>
                 {arr.length > 0 && 
                     <Glide
                     type='carousel'
