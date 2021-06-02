@@ -26,22 +26,7 @@ const GliderSnap = ({img}) => {
                     </Glide> 
                     }
             </div>
-            <div className='glider-productinfo-web'>
-                {arr.length > 0 && 
-                    <Glide
-                    type='carousel'
-                    perView='4'
-                    gap='20'
-                    >
-                        
-                    <img src={img} alt="" />
-                    <img src={img} alt="" />
-                        
-                            
-                            
-                    </Glide> 
-                }
-            </div>
+            
         </>
             
         

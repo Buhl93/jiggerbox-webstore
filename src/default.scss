@@ -47,6 +47,20 @@ body {
     overflow-x: hidden;
 }
 
+@font-face {
+    font-family: 'Watch Applemint';
+    src: url(assets/fonts/WatchApplemint.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Watch Tinkerbell';
+    src: url(assets/fonts/WatchTinkerbell.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+
 .headline {
     font-family: Watch Tinkerbell, sans-serif;
     font-size: 3rem;
@@ -102,4 +116,6 @@ li {
         margin-top: 5.5rem;
     }
 }
+
+
 

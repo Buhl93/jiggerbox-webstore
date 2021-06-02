@@ -1,4 +1,4 @@
-.glider-productinfo-mobile, .glider-productinfo-web {
+.glider-productinfo-mobile {
     width: 100vw;
     margin: auto;
 
@@ -9,14 +9,12 @@
     }
 }
 
-.glider-productinfo-web {
-    display: none;
-}
+
 
 
 
 @media screen and (min-width: 600px) {
     .glider-productinfo-mobile {
-        display: none;
+        width: 30vw;
     }
 }
